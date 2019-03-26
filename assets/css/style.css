@@ -1,0 +1,120 @@
+ .header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #4aaaa5;
+ }
+
+ #hleft{
+    background-color: #4aaaa5;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-size: 40px;
+    color: white;
+ }
+
+ p{
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    line-height: 1.6;
+ }
+
+ #hmiddle{
+    float: left;
+    width: 40%;
+    height: 100%;
+ }
+
+ #hright{
+    float: right;
+    color: #333;
+ }
+
+ h2{
+    font-size: 30px;
+    color: #4aaaa5;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    width: 100%;
+    border-bottom: 2px solid grey;
+}
+
+ .subheader {
+    position: relative;
+    background: white;
+    width: 690px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+  body {
+      background-color:#dddddd;
+  }
+  
+  section {
+
+    color: white;
+  }
+  
+  #left {
+    background-color: white;
+    float: left;
+    width: 33.3%;
+    padding: 20px;
+  }
+
+  #imgindex{
+    background-color: white;
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  .jumbotron {
+    margin: auto;
+    margin-top: 40px;
+    background: white;
+    height: 600px;
+  }
+
+  #mainportfolio {
+    margin: auto;
+    margin-top: 40px;
+    background: white;
+    height: 450px;
+    width: 690px;
+  }
+  
+  #right {
+    background-color: #666;
+    float: left;
+    width: 33.3%;
+    padding: 20px;
+  }
+  
+  .footer {
+    border-top: 8px solid #4aaaa5;
+    background-color: #666666;
+    height: 50px;
+    padding: 10px;
+  }
+
+  .button {
+    background-color:#4aaaa5;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#display {
+  font-family: monospace;
+  font-size: 60px;
+  color: green;
+
+  /* Typography */
+  text-align: center;
+
+  /* Visual */
+  background: white;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>TriviaGame</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+  </head>
+
+  <body>
+
+ 
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8" styles="">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <div id="sizeControls" class="card">
+                                <h4 class="card-header"></h4>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                    <button class="btn btn-danger btn-lg a0-button">
+                                    <span class="fa fa-ok"></span></button>
+                                    <button class="btn btn-danger btn-lg a1-button">
+                                    <span class="fa fa-ok"></span></button>
+                                    <button class="btn btn-danger btn-lg a2-button">
+                                    <span class="fa fa-ok"></span></button>
+                                    <button class="btn btn-danger btn-lg a3-button">
+                                    <span class="fa fa-ok"></span></button>
+                                    </div>
+                                </div>
+                                <div id="display">00:00</div>
+                                <div id="images"></div>
+                                
+                        </div>
+                    </div>
+                </div>
+        <div class="col-2"></div>
+    </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            populateProcess();
+        });
+
+        $(".btn").on("click", function() {
+            evaluateAnswer($(this).text());
+            populateProcess();
+      });
+    </script>
+      
+
+  </body>
+
+</html>
