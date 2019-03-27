@@ -54,13 +54,23 @@ function  evaluateAnswer(ans){
     }
 
     var imageUrl = "";
-    if(ok)
+    if(ok){
         imageUrl="assets/images/great.gif";
-    else
+        correct++;
+    }
+    else{
         imageUrl="assets/images/nonono.gif";
+        incorrect++;
+    }
+
+    stop();
     var img = $("<img>");
     img.attr("src", imageUrl);
+    img.attr("alt", "imganswer");
     $("#images").append(img);
+
+    myinterval = setInterval(populateProcess, 5000);
+
 }
 
 function displayBackground(index) {
@@ -83,16 +93,18 @@ function random(size){
 }
 
     var intervalId;
+    var myinterval;
     var clockRunning = false;
     var time = 10;
     var lap = 0;
     var numq = 10;
+    var correct = 0;
+    var incorrect = 0;
     
     function reset() {
-    
         time = 10;
         $("#display").text("00:10");
-
+        $("#imganswer").remove();
     }
     
     function start() {
@@ -100,6 +112,7 @@ function random(size){
             intervalId = setInterval(count, 1000);
             clockRunning = true;
         }
+        clearInterval(myinterval);
     }
     
     function stop() {
