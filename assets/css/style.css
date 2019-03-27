@@ -27,11 +27,12 @@
  }
 
  h2{
-    font-size: 30px;
-    color: #4aaaa5;
-    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-family: monospace;
+    font-size: 40px;
+    color: green;
     width: 100%;
     border-bottom: 2px solid grey;
+    text-align: center;
 }
 
  .subheader {
@@ -117,4 +118,9 @@
 
   /* Visual */
   background: white;
+}
+
+#images {
+  text-align: center;
+
 }

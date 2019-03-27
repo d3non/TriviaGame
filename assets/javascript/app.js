@@ -66,7 +66,6 @@ function  evaluateAnswer(ans){
     stop();
     var img = $("<img>");
     img.attr("src", imageUrl);
-    img.attr("alt", "imganswer");
     $("#images").append(img);
 
     myinterval = setInterval(populateProcess, 5000);
@@ -104,7 +103,7 @@ function random(size){
     function reset() {
         time = 10;
         $("#display").text("00:10");
-        $("#imganswer").remove();
+        $("#images").empty();
     }
     
     function start() {
@@ -128,6 +127,7 @@ function random(size){
         if (time === 0){
             stop();
             alert("Time's up");
+            incorrect++;
             populateProcess();
         }
     }
@@ -151,6 +151,28 @@ function random(size){
         return minutes + ":" + seconds;
     }
 
+    function endgame(){
+        clearInterval(myinterval);
+        $("#display").empty();
+        $("#images").empty();
+        $("#card-header").empty();
+        $("#card-body").empty();
+
+        var correctas = $("<h2>").text("Respuestas correctas: " + correct);
+        var incorrectas = $("<h2>").text("Respuestas incorrectas: " + incorrect);
+        $("#images").append(correctas);
+        $("#images").append(incorrectas);
+    }
+
+    function restartgame(){
+        time = 10;
+        lap = 0;
+        numq = 10;
+        correct = 0;
+        incorrect = 0;
+        $("#images").empty();
+    }
+
     function populateProcess(){
         if (lap<numq){
             reset();
@@ -163,5 +185,6 @@ function random(size){
         }else{
             stop();
             alert("End game");
+            endgame();
         }
     }
